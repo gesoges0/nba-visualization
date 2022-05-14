@@ -2,7 +2,8 @@ from dataclasses import dataclass
 from typing import Optional
 
 # MIL@BOS GAME5
-GAME_ID = '0042100215'
+GAME_ID = "0042100215"
+
 
 class TraditionalStats:
     GAME_ID: str

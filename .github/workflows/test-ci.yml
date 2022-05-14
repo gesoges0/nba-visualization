@@ -25,6 +25,6 @@ jobs:
       - name: Test Format
         run: |
           isort --check --diff .
-          black --check .
+          black --check --diff .
           flake8 .
       # execute tests ~ Unit Tests ~
