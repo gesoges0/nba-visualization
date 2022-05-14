@@ -14,14 +14,12 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 @app.get("/", response_class=HTMLResponse)
 async def live(request: Request):
     """この日の試合を表敬式で表示する"""
-    hoge = 'fuga'
+    hoge = "fuga"
 
     return templates.TemplateResponse(
-        'index.html',
+        "index.html",
         {
-            'request': request,
-            'hoge': hoge,
-        }
+            "request": request,
+            "hoge": hoge,
+        },
     )
-
-
