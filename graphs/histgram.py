@@ -1,9 +1,11 @@
 from fastapi import APIRouter
+
 router = APIRouter()
 
 
-from graphs.utils import GAME_ID
 from nba_api.stats.endpoints import boxscoretraditionalv2
+
+from graphs.utils import GAME_ID
 
 
 @router.get('/histgram')
