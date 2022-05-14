@@ -1,0 +1,29 @@
+name: "test"
+
+on: [pull_request, push]
+
+defaults:
+  run:
+    shell: "bash -xeuo pipefail {0}"
+
+jobs:
+  style:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      # install packages
+      - name: Install Dependencies
+        run: pip install black==22.3.0 isort==5.10.1 flake8==4.0.1
+      # execute tests ~ Formatter ~
+      - name: Test isort
+        run: isort . -c
+      - name: Test black
+        run: black . --check
+      - name: Test flake8
+        run: flake8 .
+      # execute tests ~ Unit Tests ~
