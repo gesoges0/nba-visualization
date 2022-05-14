@@ -5,6 +5,7 @@ from typing import Optional
 GAME_ID = "0042100215"
 
 
+@dataclass
 class TraditionalStats:
     GAME_ID: str
     TEAM_ID: int
