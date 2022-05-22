@@ -1,9 +1,11 @@
+from dataclasses import dataclass
+
+from fastapi import APIRouter, Request
 from nba_api.stats.endpoints import boxscoretraditionalv2
-from fastapi import Request
+
 from src.tables import templates
 from src.utils import GAME_ID, make_response
-from dataclasses import dataclass
-from fastapi import APIRouter
+
 router = APIRouter()
 
 
@@ -42,9 +44,9 @@ class View:
     HOME: TeamStats
 
     @classmethod
-    def from_boxscoretraditionalv2_teamstats(cls, l):
-        AWAY: TeamStats = TeamStats(**l[0])
-        HOME: TeamStats = TeamStats(**l[1])
+    def from_boxscoretraditionalv2_teamstats(cls, list_of_team_stats_dict):
+        AWAY: TeamStats = TeamStats(**list_of_team_stats_dict[0])
+        HOME: TeamStats = TeamStats(**list_of_team_stats_dict[1])
         return cls(AWAY, HOME)
 
 
@@ -54,12 +56,12 @@ async def team_stats(request: Request, game_id: str = GAME_ID):
         game_id=game_id
     ).get_normalized_dict()
 
-    view: View = View.from_boxscoretraditionalv2_teamstats(res['TeamStats'])
+    view: View = View.from_boxscoretraditionalv2_teamstats(res["TeamStats"])
     view_dict = make_response(request, view)
 
-    view_dict['debug'] = view
+    view_dict["debug"] = view
 
     return templates.TemplateResponse(
-        'team_stats.html',
+        "team_stats.html",
         view_dict,
     )

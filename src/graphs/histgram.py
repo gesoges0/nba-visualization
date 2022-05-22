@@ -1,7 +1,8 @@
+from fastapi import APIRouter
 from nba_api.stats.endpoints import boxscoretraditionalv2
 
 from src.utils import GAME_ID
-from fastapi import APIRouter
+
 router = APIRouter()
 
 
