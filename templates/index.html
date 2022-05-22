@@ -8,62 +8,87 @@
 </head>
 <body>
     <div class="container">
-        {{hoge}}<br>
-        <div class="row">
-            <h1>D3.js</h1>
-            <div class="col-6">
-                <div class="row">
-                    <a href="/histgram" type="button" class="btn btn-outline-primary">Histgram</a><br>
-                    <button type="button" class="btn btn-outline-secondary">DENSITY PLOT</button><br>
-                    <button type="button" class="btn btn-outline-success">BOX PLOT</button><br>
-                    <button type="button" class="btn btn-outline-danger">SCATTER PLOT</button><br>
-                    <button type="button" class="btn btn-outline-warning">VIOLIN PLOT</button><br>
-                    <button type="button" class="btn btn-outline-info">LINE PLOT</button><br>
-                    <button type="button" class="btn btn-outline-dark">AREA PLOT</button><br>
-                    <button type="button" class="btn btn-outline-success">STACKED AREA PLOT</button><br>
-                    <button type="button" class="btn btn-outline-danger">STREAM GRAPH</button><br>
-                    <button type="button" class="btn btn-outline-warning">RIDGE LINE</button><br>
-                    <button type="button" class="btn btn-outline-info">HEAT MAP</button><br>
-                    <button type="button" class="btn btn-outline-primary">BABBLE</button><br>
-                    <button type="button" class="btn btn-outline-primary">BAR PLOT</button><br>
-                    <button type="button" class="btn btn-outline-primary">DENSITY 2D</button><br>
-                    <button type="button" class="btn btn-outline-primary">SPIDER / RADAR</button><br>
-
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="row">
-                    <button type="button" class="btn btn-outline-primary">PARALLEL</button><br>
-                    <button type="button" class="btn btn-outline-primary">LOLLIPOP</button><br>
-                    <button type="button" class="btn btn-outline-primary">CIRCULAR BARPLOT</button><br>
-                    <button type="button" class="btn btn-outline-primary">TREE MAP</button><br>
-                    <button type="button" class="btn btn-outline-primary">VENN DIAGRAM</button><br>
-                    <button type="button" class="btn btn-outline-primary">DOUGHNUT</button><br>
-                    <button type="button" class="btn btn-outline-primary">PIE CHART</button><br>
-                    <button type="button" class="btn btn-outline-primary">DENDOGRAM</button><br>
-                    <button type="button" class="btn btn-outline-primary">SUNBURST</button><br>
-                    <button type="button" class="btn btn-outline-primary">STACKED AREA</button><br>
-                    <button type="button" class="btn btn-outline-primary">STREAMCHART</button><br>
-                    <button type="button" class="btn btn-outline-primary">CHORD DIAGRAM</button><br>
-                    <button type="button" class="btn btn-outline-primary">SANKEY</button><br>
-                    <button type="button" class="btn btn-outline-primary">ARC DIAGRAM</button><br>
-                </div>
-            </div>
+        <div class="row mb-5">
+            <h1>NBA-Game-Visualization</h1>
+            GAME_ID: {{game_id}}<br>
+            samunale vs samunale<br>
+            base info
         </div>
         <div class="row">
-            <h1>After Effects</h1>
-            <button type="button" class="btn btn-outline-primary">Primary</button><br>
-            <button type="button" class="btn btn-outline-secondary">Secondary</button><br>
-            <button type="button" class="btn btn-outline-success">Success</button><br>
-            <button type="button" class="btn btn-outline-danger">Danger</button><br>
-            <button type="button" class="btn btn-outline-warning">Warning</button><br>
-            <button type="button" class="btn btn-outline-info">Info</button><br>
-            <button type="button" class="btn btn-outline-dark">Dark</button><br>
-            <button type="button" class="btn btn-outline-success">Success</button><br>
-            <button type="button" class="btn btn-outline-danger">Danger</button><br>
-            <button type="button" class="btn btn-outline-warning">Warning</button><br>
-            <button type="button" class="btn btn-outline-info">Info</button><br>
-            <button type="button" class="btn btn-outline-dark">Dark</button><br>
+            <h1>Logs</h1>
+            <div class="row mb-5">
+                <div class="col-6">
+                    <div class="row">
+                        <a href="/{{game_id}}/boxscoretraditionalv2" type="button" class="btn btn-outline-primary">boxscoretraditionalv2</a><br>
+                        <a href="/{{game_id}}/teamstats" type="button" class="btn btn-outline-primary">hoge</a><br>
+                        <a href="/{{game_id}}/teamstarterbenchstats" type="button" class="btn btn-outline-primary">hoge</a><br>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <a href="/playerstats" type="button" class="btn btn-outline-primary">hoge</a><br>
+                        <a href="/playerstats" type="button" class="btn btn-outline-primary">hoge</a><br>
+                        <a href="/playerstats" type="button" class="btn btn-outline-primary">hoge</a><br>
+                    </div>
+                </div>
+            </div>
+            <h1>Stats Tables</h1>
+            <div class="row mb-5">
+                <div class="col-6">
+                    <div class="row">
+                        <a href="/{{game_id}}/team_stats" type="button" class="btn btn-outline-primary">チームスタッツ</a><br>
+                        <a href="/{{game_id}}/player_stats" type="button" class="btn btn-outline-primary">PlayerStats</a><br>
+                        <a href="/playerstats" type="button" class="btn btn-outline-primary">TeamStarterBenchStats</a><br>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <a href="/playerstats" type="button" class="btn btn-outline-primary">PlayerStats</a><br>
+                        <a href="/playerstats" type="button" class="btn btn-outline-primary">TeamStats</a><br>
+                        <a href="/playerstats" type="button" class="btn btn-outline-primary">TeamStarterBenchStats</a><br>
+                    </div>
+                </div>
+            </div>
+            <h1>GameLog Visualization</h1>
+            <div class="row mb-5">
+                <div class="col-6">
+                    <div class="row">
+                        <a href="/{{game_id}}/histgram" type="button" class="btn btn-outline-primary">Histgram</a><br>
+                        <button type="button" class="btn btn-outline-secondary">DENSITY PLOT</button><br>
+                        <button type="button" class="btn btn-outline-success">BOX PLOT</button><br>
+                        <button type="button" class="btn btn-outline-danger">SCATTER PLOT</button><br>
+                        <button type="button" class="btn btn-outline-warning">VIOLIN PLOT</button><br>
+                        <button type="button" class="btn btn-outline-info">LINE PLOT</button><br>
+                        <button type="button" class="btn btn-outline-dark">AREA PLOT</button><br>
+                        <button type="button" class="btn btn-outline-success">STACKED AREA PLOT</button><br>
+                        <button type="button" class="btn btn-outline-danger">STREAM GRAPH</button><br>
+                        <button type="button" class="btn btn-outline-warning">RIDGE LINE</button><br>
+                        <button type="button" class="btn btn-outline-info">HEAT MAP</button><br>
+                        <button type="button" class="btn btn-outline-primary">BABBLE</button><br>
+                        <button type="button" class="btn btn-outline-primary">BAR PLOT</button><br>
+                        <button type="button" class="btn btn-outline-primary">DENSITY 2D</button><br>
+                        <button type="button" class="btn btn-outline-primary">SPIDER / RADAR</button><br>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <button type="button" class="btn btn-outline-primary">PARALLEL</button><br>
+                        <button type="button" class="btn btn-outline-primary">LOLLIPOP</button><br>
+                        <button type="button" class="btn btn-outline-primary">CIRCULAR BARPLOT</button><br>
+                        <button type="button" class="btn btn-outline-primary">TREE MAP</button><br>
+                        <button type="button" class="btn btn-outline-primary">VENN DIAGRAM</button><br>
+                        <button type="button" class="btn btn-outline-primary">DOUGHNUT</button><br>
+                        <button type="button" class="btn btn-outline-primary">PIE CHART</button><br>
+                        <button type="button" class="btn btn-outline-primary">DENDOGRAM</button><br>
+                        <button type="button" class="btn btn-outline-primary">SUNBURST</button><br>
+                        <button type="button" class="btn btn-outline-primary">STACKED AREA</button><br>
+                        <button type="button" class="btn btn-outline-primary">STREAMCHART</button><br>
+                        <button type="button" class="btn btn-outline-primary">CHORD DIAGRAM</button><br>
+                        <button type="button" class="btn btn-outline-primary">SANKEY</button><br>
+                        <button type="button" class="btn btn-outline-primary">ARC DIAGRAM</button><br>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
