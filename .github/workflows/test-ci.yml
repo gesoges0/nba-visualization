@@ -2,9 +2,9 @@ name: "test"
 
 on: [pull_request, push]
 
-defaults:
-  run:
-    shell: "bash -xeuo pipefail {0}"
+#defaults:
+#  run:
+#    shell: "bash -xeuo pipefail {0}"
 
 jobs:
   style:
