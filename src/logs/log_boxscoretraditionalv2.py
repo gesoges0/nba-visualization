@@ -1,15 +1,14 @@
 from fastapi import APIRouter
 from nba_api.stats.endpoints import boxscoretraditionalv2
 
-from graphs.utils import GAME_ID
+from src.utils import GAME_ID
 
 router = APIRouter()
 
 
-@router.get("/histgram")
-async def histgram():
+@router.get("/{game_id}/boxscoretraditionalv2")
+async def log_boxscoretraditionalv2(game_id: str = GAME_ID):
     res = boxscoretraditionalv2.BoxScoreTraditionalV2(
-        game_id=GAME_ID
+        game_id=game_id
     ).get_normalized_dict()
-    # PlayerStats, TeamStats, TeamStarterBenchStats
-    return res["PlayerStats"]
+    return res
