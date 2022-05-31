@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "htmlhint": "^1.1.4"
+  },
+  "dependencies": {
+    "prettier": "^2.6.2"
+  },
+  "scripts": {
+    "fmt": "prettier --write **/*.{html,js}"
+  }
+}
