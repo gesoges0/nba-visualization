@@ -1,0 +1,23 @@
+name: "test-by-npm"
+
+on: [pull_request, push]
+
+jobs:
+  style:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+      # install packages
+      - name: Install Dependencies
+        run: |
+          npm install htmlhint --save-dev
+      # execute tests
+      - name: test htmlhint
+        run: npx htmlhint templates/
+      - name: test prettier
+        run: npx prettier --check "**/*.{js,html}"
